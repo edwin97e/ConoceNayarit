@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beach.name %>
+</p>
+
+</p>
+	<%= image_tag @beach.img.url(:medium)%>
+<p>
+
+<p>
+  <strong>Body:</strong>
+  <%= raw @beach.body %>
+</p>
+
+<%= link_to 'Edit', edit_beach_path(@beach) %> |
+<%= link_to 'Back', beaches_path %>

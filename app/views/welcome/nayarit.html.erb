@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= image_tag "nayarit.png", size: "50x50" %>
+  <%= link_to "DemoConoceNayarit", root_path, class:"navbar-brand"%>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Pueblos Magicos", pueblos_magicos_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div id="clima">
+  <center><h4 id="ti-clima">Nayarit</h4></center>
+</div>
+<div id="gen-clima">
+  <h5 id="con-clima">
+    Fundada en 1532 por Nuño de Guzmán con el nombre de Santiago de Compostela, las sucesivas rebeliones efectuadas en el territorio del rey Nayar explican la escasa arquitectura de los siglos XVI y XVII, pues los nativos destruyeron varias veces las iglesias y conventos franciscanos.
+  </h5>
+  
+  <div id="img-clima"><%= image_tag "vegetacion.jpg",size: "350x200"%></div>
+  
+  <h5 id="con-clima">
+    Nayarit fue uno de los últimos territorios admitidos como Estado de la federación mexicana, lo cual ocurrió el 1 de enero de 1917.1​
+
+    Por Decreto, el 13 de marzo de 1837 surge el Departamento de Tepic, de conformidad con el Artículo 8 de las Bases y Leyes Constitucionales de la República Mexicana de 23 de octubre de 1835; el cual contaba con una superficie de 1.868 leguas cuadradas y su población era de 62.620 habitantes. Se dividía en 2 Ayuntamientos: Tepic y Ahuacatlán.
+   </h5>
+  
+  <h5 id="con-clima">
+    Acaponeta
+    En 1838 el Departamento de Tepic contaba con una población de 67.180 habitantes. Anteriormente se le conocía como el 7º Cantón de Jalisco, nombre que retomó el 18 de septiembre de 1846 una vez que el estado de Jalisco se integró al Pacto Federal, constituyéndose en 5 Departamentos: Acaponeta, Ahuacatlán, Sentispac (hoy en día Santiago Ixcuintla), Compostela y Tepic.
+  </h5>
+  
+  <h5 id="con-clima">
+    En el año de 1858 el 7º Cantón de Jalisco registró una población de 74.538 habitantes. Miguel Miramón decretó la creación del Territorio de Tepic el 24 de diciembre de 1859. Poco después el departamento de Nayarit contaba con 97.000 habitantes y se dividió en 6 distritos: Tepic, Ahuacatlán, Compostela, Acaponeta, Santiago y San Luis. Restaurado el Federalismo, pasó a ser el Distrito Militar de Tepic, el cual se erigió por Decreto del 7 de agosto de 1867 emitido por el Presidente Benito Juárez García; se constituía en 11 Ayuntamientos: Ahuacatlán, Jala, Villa de Ixtlán, Compostela, San Pedro Lagunillas, Santiago Ixcuintla, Acaponeta, Tepic, Tuxpan, San Blas 
+  </h5>
+</div>
+<footer>
+  <div>
+      <center><%= image_tag "nayarit.png", size:"140x140" %></center>
+  </div> 
+</footer>

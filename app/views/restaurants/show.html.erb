@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+</p>
+  <%= image_tag @restaurant.img.url(:medium)%>
+<p>
+
+<p>
+  <strong>Body:</strong>
+  <%= raw @restaurant.body %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

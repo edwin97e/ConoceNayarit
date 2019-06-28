@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= image_tag "nayarit.png", size: "50x50" %>
+  <%= link_to "DemoConoceNayarit", root_path, class:"navbar-brand"%>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Pueblos Magicos", pueblos_magicos_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div id="clima">
+  <center><h4 id="ti-clima">Clima</h4></center>
+</div>
+<div id="gen-clima">
+  <h5 id="con-clima">
+    El 91.5% del estado presenta clima cálido subhúmedo, el 6% templado subhúmedo presente en las sierras, el 2% seco y semiseco hacia el sur y sureste del estado y el restante 0.5% es cálido húmedo.
+  </h5>
+  <div id="img-clima"><%= image_tag "vegetacion.jpg",size: "350x200"%></div>
+  <h5 id="con-clima">
+    La temperatura media anual del estado es de 25°C, las temperaturas mínimas promedio son alrededor de 12°C en el mes de enero y las máximas promedio puede ser ligeramente mayores a 35°C durante los meses de mayo y junio.
+  </h5>
+  <h5 id="con-clima">
+    Las lluvias se presentan en el verano durante los meses de mayo a septiembre, la precipitación media del estado es de 1 100 mm anuales.
+  </h5>
+  <h5 id="con-clima">
+    El clima cálido subhúmedo es favorable para el cultivo de: maíz, frijol, sorgo, tabaco, arroz, sandía, cacahuate, jitomate, chile seco, la caña de azúcar, café, mango, plátano y aguacate.
+  </h5>
+  <div id="img-clima"><%= image_tag "cli_nayarit.jpg"%></div>
+  <div id="img-clima"><%= image_tag "info_clima.jpg",size: "330x150" %></div>
+</div>
+<footer>
+  <div>
+      <center><%= image_tag "nayarit.png", size:"140x140" %></center>
+  </div> 
+</footer>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sitecategories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sitecategories.each do |sitecategory| %>
+      <tr>
+        <td><%= sitecategory.name %></td>
+        <td><%= link_to 'Show', sitecategory %></td>
+        <td><%= link_to 'Edit', edit_sitecategory_path(sitecategory) %></td>
+        <td><%= link_to 'Destroy', sitecategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sitecategory', new_sitecategory_path %>

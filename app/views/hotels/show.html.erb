@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hotel.name %>
+</p>
+
+</p>
+  <%= image_tag @hotel.img.url(:medium)%>
+<p>
+
+<p>
+  <strong>Body:</strong>
+  <%= raw @hotel.body %>
+</p>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
