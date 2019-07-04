@@ -71,9 +71,8 @@
 			<%= image_tag "info.jpg"%>
 			<center><h4>Informacion</h4></center>
 				<center>
-					<li><a href="">Eventos</a></li>
-					<li><a href="">Museo</a></li>
-					<li><a href="">playas</a></li>
+					<li><%= link_to "Eventos", eventos_path%></li>
+					<li><%= link_to "Playas", playas_path%></li>
 					<li><a href="/nayarit">Datos básicos de Nayarit</a></li>
 				</center>
 		</div>
@@ -81,6 +80,11 @@
 		<div id="card">
 			<%= image_tag "viajeros.jpg"%>
 			<center><h4>Sitios de Interes</h4></center>
+				<center>
+					<li>
+						<%= link_to "Sitios de Interes", sitios_turisticos_path %>
+					</li>
+				</center>
 		</div>
 
 		<div id="card">
@@ -88,10 +92,11 @@
 			<h4><center>Eventos</center></h4>
 				<center>
 					<li>
-						<a href="/events/1">Fiestas Patronales</a>  
+						<a href="../eventos/1">Regata Internacional Bahía De Banderas</a>
+						
 					</li>
 					<li>
-						<a href="/events/2">Festival del Viento</a>  
+						<a href="../eventos/2">Festival del Viento</a>  
 					</li> 
 				</center>
 				
@@ -100,6 +105,11 @@
 		<div id="card">
 			<%= image_tag "aventura.jpg"%>
 			<center><h4>Rutas Turisticas</h4></center>
+				<center>
+					<li>
+					<%= link_to "Rutas Turisticas", rutas_path%>
+					</li>
+				</center>
 		</div>
 		
 	</div>

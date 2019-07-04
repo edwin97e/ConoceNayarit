@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_26_170503) do
+ActiveRecord::Schema.define(version: 2019_07_04_204823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 2019_06_26_170503) do
     t.string "img_content_type"
     t.bigint "img_file_size"
     t.datetime "img_updated_at"
+  end
+
+  create_table "buses", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -51,7 +58,18 @@ ActiveRecord::Schema.define(version: 2019_06_26_170503) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "eventcategory_id"
+    t.string "img_file_name"
+    t.string "img_content_type"
+    t.bigint "img_file_size"
+    t.datetime "img_updated_at"
     t.index ["eventcategory_id"], name: "index_events_on_eventcategory_id"
+  end
+
+  create_table "flights", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "hotels", force: :cascade do |t|
@@ -63,6 +81,13 @@ ActiveRecord::Schema.define(version: 2019_06_26_170503) do
     t.string "img_content_type"
     t.bigint "img_file_size"
     t.datetime "img_updated_at"
+  end
+
+  create_table "lands", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "magictowns", force: :cascade do |t|
@@ -81,6 +106,18 @@ ActiveRecord::Schema.define(version: 2019_06_26_170503) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "img_file_name"
+    t.string "img_content_type"
+    t.bigint "img_file_size"
+    t.datetime "img_updated_at"
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "sites"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "img_file_name"

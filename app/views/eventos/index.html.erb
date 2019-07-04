@@ -32,16 +32,13 @@
   </div>
 </nav>
 
-
-<% @events.each do |events| %>
-  <div id="card-event">
-    <center><%= image_tag "nayarit.png", size: "50x50" %></center>
-      <h4><center><%= events.title%></center></h4>
-      <!--<center><p class="card-text"><%= raw events.body%></p></center>-->
-    <center><a href="#" class="btn btn-secondary">   Ver   </a></center>
-  </div>     
+<% @events.each do |e| %>
+  <div id="card-magictown">
+    <center><%= image_tag e.img.url(:medium)%></center>
+      <h4><center><%= e.title%></center></h4>
+    <center><%= link_to 'Ver', evento_path(e.id), class:"btn btn-secondary" %></center>
+  </div>        
 <%end%>
-
 
 
 

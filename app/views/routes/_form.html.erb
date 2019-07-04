@@ -1,0 +1,82 @@
+<%= form_with(model: route, local: true) do |form| %>
+  <% if route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(route.errors.count, "error") %> prohibited this route from being saved:</h2>
+
+      <ul>
+      <% route.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+   <div class="field" style="inline-block">
+    <%= form.label "Sitios" %>
+    <%= form.select 'sites_tmep' ,options_from_collection_for_select(Site.all,:name, :name) ,prompt: "Seleccione un Sitio"%>
+    <%= form.hidden_field :sites%>
+  </div>
+
+  <div class="field" style="inline-block">
+    <button id="btnAgregar" name="btnAgregar" onclick="return agregar(this)">Agregar</button>
+  </div>
+
+  <div id="cadena" style="height: auto;"></div>
+  <br/>
+  <div id="conten"></div>
+
+  <br/>
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.cktext_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagen %>
+    <%= form.file_field :img %>
+  </div>
+ 
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script>
+  var opciones=[]
+   function quitar(obj,index){
+    if(confirm("Quieres borrarlo")){
+      obj.parentElement.parentElement.innerHTML="";
+      opciones.splice(index,1);
+      actualizar();
+    }
+    return false;
+  }
+  function agregar(evt){
+    var select = document.getElementById("route_sites_tmep");
+    var opcion = select.options[select.selectedIndex].text;
+    opciones.push(opcion);
+    actualizar();
+    return false;
+  }
+  function actualizar(){
+    var cadena = document.getElementById("cadena");
+    var contenedor = document.getElementById("conten");
+    var cad="<ul>";
+    var cad_commas="";
+    var cad_separa="";
+    for (var i = 0; i < opciones.length; i++) {
+      cad+="<li><div>"+opciones[i]+"</div><div><button onclick='return quitar(this,"+i+")'>Quitar</button></div></li>";
+      cad_separa+=i==opciones.length-1? opciones[i]:opciones[i]+"%";
+      cad_commas+=i==opciones.length-1? opciones[i]:opciones[i]+",";
+    }
+    cad+="</ul>";
+    cadena.innerHTML=cad_commas;
+    contenedor.innerHTML=cad;
+    document.getElementById('route_sites').value = cad_separa;
+   }
+</script>

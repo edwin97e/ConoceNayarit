@@ -5,6 +5,10 @@
   <%= @event.title %>
 </p>
 
+</p>
+  <%= image_tag @event.img.url(:medium)%>
+<p>
+
 <p>
   <strong>Body:</strong>
   <%= raw @event.body %>

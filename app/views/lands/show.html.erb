@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @land.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= raw @land.body %>
+</p>
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>
